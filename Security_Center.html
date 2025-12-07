@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Security Center</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <style>
+    :root {
+      --bg-main: #05060b;
+      --bg-card: #0c111c;
+      --text-primary: #ffffff;
+      --text-secondary: #7b8194;
+      --accent: #22e1a5;
+      --border-subtle: #111827;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg-main);
+      color: var(--text-primary);
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", system-ui, sans-serif;
+    }
+
+    .app {
+      min-height: 100vh;
+      max-width: 480px;
+      margin: 0 auto;
+      padding: 12px 12px 24px;
+    }
+
+    .top-bar {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      padding-bottom: 10px;
+    }
+
+    .back-btn {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 32px;
+      height: 32px;
+      border-radius: 999px;
+      background-color: #151824;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .back-btn img {
+      width: 18px;
+      height: 18px;
+      display: block;
+    }
+
+    .title {
+      font-size: 16px;
+      font-weight: 500;
+    }
+
+    .list {
+      margin-top: 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .item {
+      background-color: #0c111c;
+      border-radius: 14px;
+      padding: 12px 14px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .item-left {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .icon-box {
+      width: 32px;
+      height: 32px;
+      border-radius: 10px;
+      background-color: #050812;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .icon-box-inner {
+      width: 20px;
+      height: 20px;
+      border-radius: 6px;
+      border: 1px solid #4b5563;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 11px;
+    }
+
+    .icon-box-inner.phone::before {
+      content: "\1F4F1"; /* phone emoji */
+    }
+
+    .icon-box-inner.fund::before {
+      content: "\1F3E6"; /* bank */
+    }
+
+    .icon-box-inner.login::before {
+      content: "\1F512"; /* lock */
+    }
+
+    .icon-box-inner.email::before {
+      content: "\2709"; /* envelope */
+    }
+
+    .label-text {
+      font-size: 14px;
+    }
+
+    .item-right {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 13px;
+      color: var(--text-secondary);
+    }
+
+    .chevron {
+      width: 7px;
+      height: 7px;
+      border-right: 1px solid var(--text-secondary);
+      border-bottom: 1px solid var(--text-secondary);
+      transform: rotate(-45deg);
+      margin-top: 1px;
+    }
+
+    @media (min-width: 481px) {
+      body {
+        display: flex;
+        justify-content: center;
+        background-color: #000;
+      }
+      .app {
+        margin-top: 12px;
+        border-radius: 20px;
+        border: 1px solid #171924;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="app">
+    <header class="top-bar">
+      <div class="back-btn">
+        <img src="files/back-icon-D2ne3Npi.png" alt="Back" />
+      </div>
+      <div class="title">Security Center</div>
+    </header>
+
+    <main class="list">
+      <section class="item">
+        <div class="item-left">
+          <div class="icon-box">
+            <div class="icon-box-inner phone"></div>
+          </div>
+          <div class="label-text">Phone</div>
+        </div>
+        <div class="item-right">
+          <span>Set</span>
+          <div class="chevron"></div>
+        </div>
+      </section>
+
+      <section class="item">
+        <div class="item-left">
+          <div class="icon-box">
+            <div class="icon-box-inner fund"></div>
+          </div>
+          <div class="label-text">Fund Password</div>
+        </div>
+        <div class="item-right">
+          <span>Set</span>
+          <div class="chevron"></div>
+        </div>
+      </section>
+
+      <section class="item">
+        <div class="item-left">
+          <div class="icon-box">
+            <div class="icon-box-inner login"></div>
+          </div>
+          <div class="label-text">Login Password</div>
+        </div>
+        <div class="item-right">
+          <span>Set</span>
+          <div class="chevron"></div>
+        </div>
+      </section>
+
+      <section class="item">
+        <div class="item-left">
+          <div class="icon-box">
+            <div class="icon-box-inner email"></div>
+          </div>
+          <div class="label-text">Email</div>
+        </div>
+        <div class="item-right">
+          <span>Set</span>
+          <div class="chevron"></div>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>

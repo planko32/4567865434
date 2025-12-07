@@ -1,0 +1,223 @@
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", system-ui, sans-serif;
+  background: #05070B;
+  color: #ffffff;
+  -webkit-font-smoothing: antialiased;
+}
+
+.app {
+  min-height: 100vh;
+  max-width: 480px;
+  margin: 0 auto;
+  background: #05070B;
+}
+
+/* Header */
+.app-header {
+  display: flex;
+  align-items: center;
+  padding: 12px 16px;
+}
+
+.back-btn {
+  width: 30px;
+  height: 30px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.2);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 8px;
+  text-decoration: none;
+}
+
+.back-arrow {
+  width: 8px;
+  height: 8px;
+  border-left: 2px solid #ffffff;
+  border-bottom: 2px solid #ffffff;
+  transform: rotate(45deg);
+}
+
+.app-header-title {
+  flex: 1;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.header-menu {
+  width: 26px;
+  text-align: right;
+  font-size: 18px;
+}
+
+/* Main layout */
+.app-main {
+  padding: 0 16px 32px;
+  font-size: 13px;
+}
+
+/* Top intro text */
+.task-title {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 8px 0 4px;
+}
+
+.task-subtitle {
+  font-size: 12px;
+  color: rgba(255,255,255,0.6);
+  margin-bottom: 10px;
+}
+
+/* Reward details button */
+.reward-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 16px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.6);
+  background: transparent;
+  color: #ffffff;
+  font-size: 12px;
+  margin-bottom: 14px;
+}
+
+/* Summary card */
+.summary-card {
+  margin-top: 4px;
+  background: linear-gradient(90deg, #122B40 0%, #0B2F3B 45%, #050B13 100%);
+  border-radius: 14px;
+  padding: 12px 14px 10px;
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.summary-col {
+  flex: 1;
+}
+
+.summary-label {
+  font-size: 11px;
+  color: rgba(255,255,255,0.7);
+}
+
+.summary-value-amount {
+  font-size: 18px;
+  margin-top: 4px;
+}
+
+.summary-value-currency {
+  font-size: 11px;
+  margin-left: 4px;
+}
+
+.summary-middle {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+  color: rgba(255,255,255,0.78);
+}
+
+/* One-click claim button */
+.claim-btn {
+  padding: 7px 18px;
+  border-radius: 999px;
+  border: 1px solid #22C5FF;
+  color: #22C5FF;
+  background: transparent;
+  font-size: 12px;
+}
+
+/* Tab bar (Limited time / Daily / Long-term) */
+.task-tabs {
+  display: flex;
+  margin-top: 14px;
+  background: #111B27;
+  border-radius: 999px;
+  padding: 3px;
+}
+
+.task-tab {
+  flex: 1;
+  height: 32px;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  color: rgba(255,255,255,0.7);
+}
+
+.task-tab.active {
+  background: #2A3343;
+  color: #ffffff;
+}
+
+/* Status tabs (In progress / Completed / Not completed) */
+.status-tabs {
+  display: flex;
+  margin-top: 16px;
+  font-size: 12px;
+}
+
+.status-tab {
+  margin-right: 16px;
+  padding-bottom: 4px;
+  color: rgba(255,255,255,0.7);
+}
+
+.status-tab.active {
+  color: #00C0FF;
+  border-bottom: 2px solid #00C0FF;
+}
+
+/* Empty state */
+.empty-state {
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.empty-circle {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  background: #141922;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 14px;
+}
+
+.empty-circle img {
+  width: 86px;
+  height: 86px;
+  opacity: 0.9;
+}
+
+.empty-text {
+  font-size: 13px;
+  color: rgba(255,255,255,0.7);
+}
